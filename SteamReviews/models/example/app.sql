@@ -1,12 +1,7 @@
-{{ config(materialized='table') }}
 
-with {{ref('steam_reviews')}} as (
 
-    select app_id as app_id
-    union all
-    select app_name as app_name
-
+with app_info as (
+    select app_id, app_name from {{ref('steam_reviews')}}
 )
 
-select *
-from {{ref('steam_reviews')}}
+select * from app_info
