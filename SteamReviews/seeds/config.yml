@@ -1,4 +1,4 @@
 version: 2
 
 seeds:
-  - name: steam_reviews
+  - name: steam_reviews_clean
